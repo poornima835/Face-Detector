@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="469dp"
+        android:background="@color/black"
+        android:src="@drawable/detectt" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/teal_200"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="LGM"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/detect_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click to Detect"
+        android:textColor="#040303"
+        android:textStyle="bold"
+          android:layout_alignParentBottom="true"/>
+
+    <com.wonderkiln.camerakit.CameraView
+
+        android:id="@+id/camera_view"
+        android:layout_above="@+id/detect_btn"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"></com.wonderkiln.camerakit.CameraView>
+
+    <com.example.facedetection.Helper.GraphicOverlay
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/graphic_overlay"
+        android:layout_above="@+id/detect_btn"/>
+
+
+</RelativeLayout>
